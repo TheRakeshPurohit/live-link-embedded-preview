@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 
 function App() {
-  const [data, setData] = React.useState([]);
+  const [data, setData] = React.useState({});
   const [enteredURL, setEnteredURL] = React.useState("");
 
   const onSubmitClick = () => {
@@ -36,7 +36,6 @@ function App() {
           Object.assign(tagAttributes, { [tagOG]: tag?.content });
         });
 
-        console.log("tagAttributes", tagAttributes);
         setData(tagAttributes);
       });
   };
