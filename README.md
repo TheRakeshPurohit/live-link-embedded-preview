@@ -21,7 +21,7 @@ Generate link preview as you see on social platforms. Right in the browser witho
 
 To avoid CORS errors, I have used CORS-ANYWHERE.
 
-If you face the same, go to this [link](cors-anywhere.herokuapp.com/corsdemo)
+If you face the same, go to this [link](https://cors-anywhere.herokuapp.com/corsdemo)
 
 Click on `"Request temporary access to the demo server"` button
 
