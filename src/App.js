@@ -3,18 +3,13 @@ import "./styles.css";
 
 function App() {
   const [data, setData] = React.useState({});
-  const [enteredURL, setEnteredURL] = React.useState("");
 
   const onSubmitClick = () => {
-    setEnteredURL(
+    fetch(
       `https://cors-anywhere.herokuapp.com/${
         document.getElementById("enteredURL")?.value
       }`
-    );
-  };
-
-  const getPreviewData = () => {
-    fetch(enteredURL)
+    )
       .then((response) => response.text())
       .then((html) => {
         // Convert the HTML string into a document object
@@ -40,12 +35,6 @@ function App() {
       });
   };
 
-  React.useEffect(() => {
-    if (enteredURL) {
-      getPreviewData();
-    }
-  }, [enteredURL]);
-
   return (
     <div className="App">
       <input id="enteredURL" name="enteredURL" />
@@ -59,7 +48,7 @@ function App() {
           <a href={data?.url}>
             <img
               src={data?.image}
-              alt={`${data?.description ?? "thumbnail"}`}
+              alt={data?.description}
               height={250}
               width={500}
             />
