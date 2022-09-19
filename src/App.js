@@ -37,6 +37,13 @@ function App() {
 
   return (
     <div className="App">
+    <a href="https://github.com/therakeshpurohit/live-link-embedded-preview">
+        Fork me on GitHub
+      </a>
+      <span>
+        Not working?{" "}
+        <a href="https://cors-anywhere.herokuapp.com/corsdemo">CORS Error</a>
+      </span>
       <input id="enteredURL" name="enteredURL" />
       <button onClick={onSubmitClick} value="submit">
         Submit
